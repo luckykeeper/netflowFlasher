@@ -4,8 +4,7 @@ WORKDIR /go/src/
 
 COPY ./ /go/src/
 
-RUN go env -w GOPROXY=https://goproxy.cn,direct && \
-    go mod tidy && \
+RUN go mod tidy && \
     go build && \
     chmod +x ./netflowFlasher
 
